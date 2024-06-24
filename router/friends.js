@@ -21,7 +21,7 @@ router.get("/:email",(req,res)=>{
 
   const email = req.params.email;
 
-  req.send(friends[email]);
+  res.send(friends[email]);
 
 });
 
