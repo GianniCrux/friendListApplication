@@ -47,7 +47,7 @@ router.post("/",(req,res)=>{
 // PUT request: Update the details of a friend with email id
 router.put("/:email", (req, res) => {
 
-  const email = rea.params.email;
+  const email = req.params.email;
   let friend = friends[email];
 
   if (friend) {
