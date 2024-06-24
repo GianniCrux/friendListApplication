@@ -28,8 +28,19 @@ router.get("/:email",(req,res)=>{
 
 // POST request: Add a new friend
 router.post("/",(req,res)=>{
-  // Update the code here
-  res.send("Yet to be implemented")//This line is to be replaced with actual return value
+
+  //Check if mail is provided in the req body 
+  if (req.body.email) {
+    friends[req.body.email] = {
+      "firstName": req.body.firstName,
+      "lastName": req.body.lastName,
+      "DOB": req.body.DOB,
+    };
+  }
+  //Send a res indicatin user addition
+  res.send("The user" + (' ') + (res.body.firstName) + " Has been added!");
+
+
 });
 
 
